@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance List</title>
+</head>
+<body>
+    <h1>Attendance List</h1>
+    <table border="1">
+        <tr>
+            <th>Reg No</th>
+            <th>Date</th>
+            <th>Subject</th>
+            <th>Faculty</th>
+            <th>Type</th>
+            <th>Status</th>
+        </tr>
+        {% for record in attendance %}
+        <tr>
+            <td>{{ record.reg_no.reg_no }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.subject }}</td>
+            <td>{{ record.faculty }}</td>
+            <td>{{ record.type }}</td>
+            <td>{{ record.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

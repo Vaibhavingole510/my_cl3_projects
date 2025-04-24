@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity List</title>
+</head>
+<body>
+    <h1>Activity List</h1>
+    <table border="1">
+        <tr>
+            <th>Reg No</th>
+            <th>Activity Name</th>
+            <th>Organization Name</th>
+            <th>Prize</th>
+            <th>Date</th>
+        </tr>
+        {% for activity in activities %}
+        <tr>
+            <td>{{ activity.reg_no.reg_no }}</td>
+            <td>{{ activity.name_of_activity }}</td>
+            <td>{{ activity.organization_name }}</td>
+            <td>{{ activity.prize }}</td>
+            <td>{{ activity.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
